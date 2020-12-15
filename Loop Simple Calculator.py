@@ -10,24 +10,25 @@ def simpcalc() :
 	num2 = float(input("Enter your second number: "))
 
 	if op == "+" :
-		addition = num1 + num2
-		print(addition)
+		result = num1 + num2
 		
 	elif op == "-" :
-		subtraction = num1 - num2
-		print(subtraction) 
+		result = num1 - num2
 		
 	elif op == "/" :
 		if num2 != 0 :
-			division = num1 / num2
-			print(division)
+			result = num1 / num2
+		else:
+			result = "Can't divide by 0"
 	
 	elif op == "*" :
-		multiplication = num1 * num2
-		print (multiplication) 
+		result = num1 * num2
 		
 	else:
-		print("Invalid operator")
+		result = "Invalid operator"
+
+	print(result)
+
 	loopcalc()
 
 #LOOPING FUNCTION
