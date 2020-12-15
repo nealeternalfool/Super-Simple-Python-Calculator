@@ -8,13 +8,6 @@ def simpcalc() :
 	op = input("Enter an operator: ")
 	
 	num2 = float(input("Enter your second number: "))
-		
-#Defining operators
-	addition = 1
-	subtraction = 1
-	division = 1
-	multiplication = 1
-	
 
 	if op == "+" :
 		addition = num1 + num2
