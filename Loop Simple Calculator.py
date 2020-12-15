@@ -18,11 +18,7 @@ def simpcalc() :
 		print(subtraction) 
 		
 	elif op == "/" :
-		if num1 or num2 == 0:
-			num1 = int(num1)
-			num2 = int(num2)
-			division = num1 / num2
-		else:
+		if num2 != 0 :
 			division = num1 / num2
 			print(division)
 	
@@ -41,7 +37,7 @@ def loopcalc() :
 	
 	if repeat == "Y" :
 		simpcalc()
-		
+
 	elif repeat == "N":
 		print("Understood, have a great day!")
 		return
@@ -49,6 +45,6 @@ def loopcalc() :
 	else:
 		print("Invalid answer, please try again")
 		loopcalc()
-		
+
 #calling the function
 simpcalc()
