@@ -8,37 +8,27 @@ def simpcalc() :
 	op = input("Enter an operator: ")
 	
 	num2 = float(input("Enter your second number: "))
-		
-#Defining operators
-	addition = 1
-	subtraction = 1
-	division = 1
-	multiplication = 1
-	
 
 	if op == "+" :
-		addition = num1 + num2
-		print(addition)
+		result = num1 + num2
 		
 	elif op == "-" :
-		subtraction = num1 - num2
-		print(subtraction) 
+		result = num1 - num2
 		
 	elif op == "/" :
-		if num1 or num2 == 0:
-			num1 = int(num1)
-			num2 = int(num2)
-			division = num1 / num2
+		if num2 != 0 :
+			result = num1 / num2
 		else:
-			division = num1 / num2
-			print(division)
+			result = "Can't divide by 0"
 	
 	elif op == "*" :
-		multiplication = num1 * num2
-		print (multiplication) 
+		result = num1 * num2
 		
 	else:
-		print("Invalid operator")
+		result = "Invalid operator"
+
+	print(result)
+
 	loopcalc()
 
 #LOOPING FUNCTION
@@ -48,7 +38,7 @@ def loopcalc() :
 	
 	if repeat == "Y" :
 		simpcalc()
-		
+
 	elif repeat == "N":
 		print("Understood, have a great day!")
 		return
@@ -56,6 +46,6 @@ def loopcalc() :
 	else:
 		print("Invalid answer, please try again")
 		loopcalc()
-		
+
 #calling the function
 simpcalc()
